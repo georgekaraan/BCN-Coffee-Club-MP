@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.main-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: black;
+    color: white;
+}
+
+.pages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 3em;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.pages a:link {
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.splash {
+    background-image: url(./images/coffee_grounds.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.splash-child {
+    height: 25%;
+    align-items: center;
+    color: white;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: transparent;
+}
+
+.splash-child p {
+    background: transparent;
+}
+
+.new-section a {
+    color: hotpink;
+}
+
+
+#welcome {
+    font-size: xx-large;
+}
+
+#welcome-sub,
+.sec-text {
+    font-size: x-large;
+}
+
+button.discover {
+    background-color: hotpink;
+    border: none;
+    color: black;
+    padding: 10px 25px;
+    text-align: right;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+
+#map {
+    width: 100%;
+    /* height: 100%; */
+    position: relative;
+}
+
+#loc-text {
+    margin-bottom: 10px;
+}
+
+.gallery,
+.brewing,
+.about,
+.location {
+    margin: 3%;
+}
+
+.new-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.sec-text {
+    font-size: x-large;
+    margin-bottom: 10px;
+}
+
+.gallery .inner-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+
+}
+
+.gallery .inner-grid .card:nth-child(1) {
+    grid-column: 1/-1;
+}
+
+
+.brewing .inner-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+
+}
+
+.inner-grid img {
+    width: 100%;
+}
+
+.brewing .inner-grid img,
+.brewing .inner-grid p {
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.card {
+    border-radius: 5px;
+    background-color: transparent;
+    color: black;
+}
+
+.brewing .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.brewing h4 {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    position: absolute;
+    /* bottom: 0; */
+    width: 100%;
+
+}
+
+.mobile {
+    display: none;
+}
+
+
+/* for screen less than 750px */
+@media all and (max-width: 750px) {
+
+    .gallery .inner-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .brewing .inner-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+}
